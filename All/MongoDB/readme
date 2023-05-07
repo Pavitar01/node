@@ -2,3 +2,6 @@ use [db name]
 db.createcollection("name");
 show dbs;
 db.[name od collection].drop();
+
+
+use of robo3t

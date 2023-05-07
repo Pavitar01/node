@@ -1,0 +1,56 @@
+//db.collection.find(query,projection)
+// db;
+// hello
+// show collections;
+// pavi
+// db.pavi.find().pretty();
+// {
+//     _id: ObjectId("64568593c655376f43222a33"),
+//     id: 1,
+//     type: 'text'
+//   }{
+//   _id: ObjectId("64568653c655376f43222a34"),
+//   id: 2,
+//   type: 'frontend'
+// }
+//query
+// db.pavi.find({ id: 1 }).pretty();
+// {
+//     _id: ObjectId("64568593c655376f43222a33"),
+//     id: 1,
+//     type: 'text'
+//   }
+
+// find(query,projection)
+// if project is 0 then no value pass
+// db.pavi.find({id:1},{id:1}).pretty();
+// {
+//     _id: ObjectId("64568593c655376f43222a33"),
+//     id: 1
+//   }
+
+// db.pavi.find({type:"text"},{_id:0,type:1}).pretty();
+// {
+//     type: 'text'
+//   }
+
+// .skip(1);
+// .limit(1);
+// findone
+
+//-------------------------update -----------------
+// ({which document value},{ $set:{replace value}})
+
+// db.pavi.updateOne({id:2},{$set:{type:"hello"}});
+
+// update more than one
+// db.pavi.updateMany({type:"text"},{$set:{text:"data"}})
+
+//---------------------------Delete --------------
+
+// db.collection_name.deleteMany({ value or type });
+
+// db.pavi.deleteOne({ type: "text" });
+
+//for deleting all
+// db.pavi.deleteMany({})
