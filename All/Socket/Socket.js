@@ -10,7 +10,10 @@ app.get("/", (req, res) => {
 
 var io = require("socket.io")(http);
 //server side
-io.on("connection", (socket) => {
+
+var cnsp = io.of("/hello");
+
+cnsp.on("connection", (socket) => {
   console.log("a user connected");
 
   socket.on("disconnect", () => {
